@@ -1,7 +1,7 @@
 {
   "name": "remedy",
   "version": "1.0.0",
-  "description": "file remove emitter middleware",
+  "description": "emitting middleware for file removing",
   "main": "lib/remedy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
