@@ -1,6 +1,6 @@
 # Remedy
 
-File remove emitter middleware based on [socket.io](http://socket.io "Socket.io") and [remy](https://github.com/coderaiser/node-remy "Remy").
+Emitting middleware for file removing based on [socket.io](http://socket.io "Socket.io") and [remy](https://github.com/coderaiser/node-remy "Remy").
 
 ## Install
 
