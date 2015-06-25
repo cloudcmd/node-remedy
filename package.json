@@ -1,0 +1,35 @@
+{
+  "name": "remedy",
+  "version": "1.0.0",
+  "description": "file remove emitter middleware",
+  "main": "lib/remedy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bower": "bower"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/node-remedy.git"
+  },
+  "keywords": [
+    "file",
+    "remove",
+    "emitter",
+    "middleware"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/node-remedy/issues"
+  },
+  "homepage": "https://github.com/coderaiser/node-remedy",
+  "dependencies": {
+    "join-io": "~1.4.0",
+    "mellow": "~1.3.4",
+    "mollify": "~1.0.4",
+    "remy": "~1.0.0"
+  },
+  "devDependencies": {
+    "bower": "~1.4.1"
+  }
+}
