@@ -57,10 +57,11 @@ var remedy      = require('remedy'),
     express     = require('express'),
     io          = require('socket.io'),
     app         = express(),
-    server      = http.createServer(app);
-
-socket          = io.listen(server),
-server.listen(port, ip);
+    port        = 1337,
+    server      = http.createServer(app),
+    socket      = io.listen(server);
+    
+server.listen(port);
 
 app.use(remedy({
     minify: true,
@@ -71,10 +72,6 @@ remedy.listen(socket, {
     prefix: '/remedy',  /* default              */
     root: '/',          /* string or function   */
 });
-```
-
-```js
-
 ```
 
 ## License
