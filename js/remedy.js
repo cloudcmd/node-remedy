@@ -26,8 +26,8 @@ var io, load, exec, join, Emitify, loadRemote;
             });
         }
         
-        Remedy.copy  = function(from, to, files) {
-            Progress.copy(from, to, files);
+        Remedy.remove  = function(from, files) {
+            Progress.remove(from, files);
         };
         
         Remedy.abort = function() {
