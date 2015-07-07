@@ -1,3 +1,9 @@
+2015.07.07, v1.0.8
+
+feature:
+- (remedy) load loadRemote only when it is not loaded before
+
+
 2015.07.02, v1.0.7
 
 fix:
