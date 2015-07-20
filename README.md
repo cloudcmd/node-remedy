@@ -14,7 +14,7 @@ Could be loaded from url `/remedy/remedy.js`.
 
 ```js
 /* could be one argument: callback */
-remedy('/remedy', function() {
+remedy('/remedy', function(remover) {
     var from        = '/',
         to          = '/tmp',
         names       = [
@@ -26,8 +26,8 @@ remedy('/remedy', function() {
         
         end     = function() {
             console.log('end');
-            remedy.removeListener('progress', progress);
-            remedy.removeListener('end', end);
+            remover.removeListener('progress', progress);
+            remover.removeListener('end', end);
         },
     
     error   = function(data) {
@@ -35,16 +35,16 @@ remedy('/remedy', function() {
             is = confirm(msg);
         
         if (is)
-            remedy.continue();
+            remover.continue();
         else
-            remedy.abort();
+            remover.abort();
     };
     
-    remedy(from, names);
+    remover(from, names);
     
-    remedy.on('progress', progress);
-    remedy.on('end', end);
-    remedy.on('error', error);
+    remover.on('progress', progress);
+    remover.on('end', end);
+    remover.on('error', error);
 });
 
 ```
