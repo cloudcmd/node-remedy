@@ -30,6 +30,6 @@
     "remy": "~1.0.0"
   },
   "devDependencies": {
-    "bower": "~1.4.1"
+    "bower": "^1.5.2"
   }
 }
