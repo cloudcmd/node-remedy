@@ -1,6 +1,6 @@
 {
   "name": "remedy",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "emitting middleware for file removing",
   "main": "lib/server.js",
   "scripts": {
