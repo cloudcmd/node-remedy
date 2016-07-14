@@ -65,7 +65,9 @@ server.listen(port);
 
 app.use(remedy({
     minify: true,
-    online: true
+    online: true,
+    authCheck: function(socket, success) {
+    }
 });
 
 remedy.listen(socket, {
