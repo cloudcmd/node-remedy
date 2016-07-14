@@ -1,3 +1,10 @@
+2016.07.14, v1.4.0
+
+feature:
+- (bower) emitify v2.1.1
+- (remedy) add authCheck
+
+
 2016.06.09, v1.3.2
 
 feature:
