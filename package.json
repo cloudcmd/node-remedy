@@ -33,7 +33,7 @@
     "join-io": "~1.4.0",
     "mellow": "~2.0.0",
     "mollify": "~1.0.4",
-    "remy": "~1.0.0"
+    "remy": "^2.0.0"
   },
   "devDependencies": {
     "bower": "^1.5.2",
