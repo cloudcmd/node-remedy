@@ -2,7 +2,6 @@
 
 const http = require('http');
 const express = require('express');
-const freeport = require('freeport');
 const io = require('socket.io');
 const ioClient = require('socket.io-client');
 
@@ -38,21 +37,19 @@ function connect(defaultPrefix, middle, path, options, fn) {
     app.use(middle(options));
     
     middle.listen(io(server), options);
+    
+    if (options && !Object.keys(options).length)
+        options = undefined;
+    
+    server.listen(() => {
+        const {port} = server.address();
+        const url = `http://127.0.0.1:${port}/${path}`;
+        const socket = ioClient(url);
         
-    freeport((error, port) => {
-        const ip = '127.0.0.1';
-        
-        if (options && !Object.keys(options).length)
-            options = undefined;
-        
-        server.listen(port, ip, () => {
-            const url = `http://127.0.0.1:${port}/${path}`;
-            const socket = ioClient(url);
-            
-            fn(socket, () => {
-                socket.destroy();
-                server.close();
-            });
+        fn(socket, () => {
+            socket.destroy();
+            server.close();
         });
     });
 }
+
