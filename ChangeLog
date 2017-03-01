@@ -1,3 +1,12 @@
+2017.03.01, v1.5.4
+
+feature:
+- (modules) socket.io v1.7.3
+- (travis) node_js: rm 4
+- (package) rm freeport
+- (package) nyc v10.1.2
+
+
 2017.02.01, v1.5.3
 
 feature:
