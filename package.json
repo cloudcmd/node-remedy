@@ -40,7 +40,7 @@
     "coveralls": "^2.11.11",
     "eslint": "^3.0.1",
     "express": "^4.14.0",
-    "nyc": "^10.1.2",
+    "nyc": "^11.0.2",
     "redrun": "^5.0.1",
     "socket.io": "^2.0.1",
     "socket.io-client": "^2.0.1",
