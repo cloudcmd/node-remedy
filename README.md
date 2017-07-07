@@ -15,29 +15,29 @@ Could be loaded from url `/remedy/remedy.js`.
 ```js
 /* could be one argument: callback */
 remedy('/remedy', function(remover) {
-    var from        = '/',
-        to          = '/tmp',
-        names       = [
-            'bin'
-        ],
-        progress    = function(value) {
-            console.log('progress:', value);
-        },
-        
-        end     = function() {
-            console.log('end');
-            remover.removeListener('progress', progress);
-            remover.removeListener('end', end);
-        },
+    const from = '/';
+    const to = '/tmp';
+    const names = [
+        'bin'
+    ];
+    const progress = (value) => {
+        console.log('progress:', value);
+    };
     
-    error   = function(data) {
-        var msg = data + '\n Continue?',
-            is = confirm(msg);
+    const end = () => {
+        console.log('end');
+        remover.removeListener('progress', progress);
+        remover.removeListener('end', end);
+    };
+    
+    const error = (data) => {
+        const msg = data + '\n Continue?';
+        const is = confirm(msg);
         
         if (is)
-            remover.continue();
-        else
-            remover.abort();
+            return remover.continue();
+        
+        remover.abort();
     };
     
     remover(from, names);
@@ -52,19 +52,18 @@ remedy('/remedy', function(remover) {
 ## Server
 
 ```js
-var remedy      = require('remedy'),
-    http        = require('http'),
-    express     = require('express'),
-    io          = require('socket.io'),
-    app         = express(),
-    port        = 1337,
-    server      = http.createServer(app),
-    socket      = io.listen(server);
-    
+const remedy = require('remedy');
+const http = require('http');
+const express = require('express');
+const io = require('socket.io');
+const app = express();
+const port = 1337;
+const server = http.createServer(app);
+const socket = io.listen(server);
+
 server.listen(port);
 
 app.use(remedy({
-    minify: true,
     online: true,
     authCheck: function(socket, success) {
     }
@@ -76,6 +75,15 @@ remedy.listen(socket, {
 });
 ```
 
+## Environments
+
+In old `node.js` environments that supports `es5` only, `dword` could be used with:
+
+```js
+var remedy = require('remedy/legacy');
+```
+
 ## License
 
 MIT
+
