@@ -4,6 +4,4 @@ npm-debug.log
 *.swp
 dist
 dist-dev
-legacy
-server_
 

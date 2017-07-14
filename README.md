@@ -75,14 +75,6 @@ remedy.listen(socket, {
 });
 ```
 
-## Environments
-
-In old `node.js` environments that supports `es5` only, `dword` could be used with:
-
-```js
-var remedy = require('remedy/legacy');
-```
-
 ## License
 
 MIT
