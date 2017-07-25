@@ -12,7 +12,9 @@ const remove = require('./remove');
 const remedyFn = currify(_remedyFn);
 const isDev = process.env.NODE_ENV === 'development';
 
-module.exports = (options = {}) => {
+module.exports = (options) => {
+    options = options || {};
+    
     const router = Router();
     const prefix = options.prefix || '/remedy';
     
