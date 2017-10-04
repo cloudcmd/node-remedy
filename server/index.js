@@ -48,7 +48,7 @@ function _remedyFn(options, req, res, next) {
     
     req.url = req.url.replace(prefix, '');
     
-    if (/^\/remedy\.js(\.map)?$/.test(req.url))
+    if (/^\/(remedy|0)\.js(\.map)?$/.test(req.url))
         req.url = '/dist' + req.url;
     
     if (isDev)

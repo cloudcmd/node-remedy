@@ -1,6 +1,9 @@
 {
   "presets": [
-    "es2015"
+    "env"
+  ],
+  "plugins": [
+    "dynamic-import-webpack"
   ]
 }
 
