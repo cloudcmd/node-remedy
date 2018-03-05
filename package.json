@@ -11,8 +11,9 @@
     "lint:client": "eslint --env browser --rule 'no-console:0' client",
     "lint:server": "eslint server",
     "build": "redrun build:*",
-    "build:client": "webpack --progress",
-    "build:client:dev": "NODE_ENV=development redrun build:client",
+    "build-progress": "webpack --progress",
+    "build:client": "npm run build-progress -- --mode production",
+    "build:client:dev": "NODE_ENV=development npm run build-progress -- --mode development",
     "watcher": "nodemon -w client -w server --exec",
     "watch:test": "npm run watcher -- 'npm test'",
     "watch:lint": "npm run watcher -- 'npm run lint'",
@@ -60,6 +61,7 @@
     "socket.io": "^2.0.1",
     "socket.io-client": "^2.0.1",
     "tape": "^4.6.0",
-    "webpack": "^3.1.0"
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   }
 }
