@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/node-remedy.git"
+    "url": "git://github.com/cloudcmd/node-remedy.git"
   },
   "keywords": [
     "file",
@@ -31,12 +31,12 @@
     "emitter",
     "middleware"
   ],
-  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "author": "cloudcmd <mnemonic.enemy@gmail.com> (http://cloudcmd.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coderaiser/node-remedy/issues"
+    "url": "https://github.com/cloudcmd/node-remedy/issues"
   },
-  "homepage": "https://github.com/coderaiser/node-remedy",
+  "homepage": "https://github.com/cloudcmd/node-remedy",
   "engines": {
     "node": ">=4"
   },
